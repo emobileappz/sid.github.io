@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Smart Parking Manager App | Parking Operations & Billing Management by Kaaviya SivaKumar</title>
+  <meta name="description" content="Smart Parking Manager is a comprehensive tool for managing parking operations, billing and receipt generation. Streamline your parking business with our powerful app.">
+  <meta name="keywords" content="parking manager, parking app, parking operations, parking billing, receipt generation, parking business, Smart Parking Manager, Kaaviya SivaKumar, parking software">
+  <meta name="author" content="Kaaviya SivaKumar">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://emobileappz.github.io/sid.github.io/smart-parking.html">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Smart Parking Manager - Complete Parking Operations Solution">
+  <meta property="og:description" content="Manage parking operations, billing, and receipts effortlessly. The ultimate parking management app for businesses and operators.">
+  <meta property="og:image" content="https://emobileappz.github.io/sid.github.io/assets/smart-parking-og.jpg">
+  <meta property="og:url" content="https://emobileappz.github.io/sid.github.io/smart-parking.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KSK Apps">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Smart Parking Manager - Parking Operations Made Easy">
+  <meta name="twitter:description" content="Professional parking management with billing and receipt generation. Download Smart Parking Manager from Google Play Store.">
+  <meta name="twitter:image" content="https://emobileappz.github.io/sid.github.io/assets/smart-parking-og.jpg">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Smart Parking Manager",
+    "description": "A comprehensive tool for managing parking operations, including billing and receipt generation",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Android",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Kaaviya SivaKumar"
+    },
+    "publisher": {
+      "@type": "Organization", 
+      "name": "KSK Apps",
+      "url": "https://emobileappz.github.io/sid.github.io/"
+    },
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.ksk.smartparking",
+    "screenshot": "https://emobileappz.github.io/sid.github.io/assets/smart-parking-screenshot.jpg",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.4",
+      "ratingCount": "1200"
+    },
+    "featureList": [
+      "Parking space management",
+      "Automated billing system", 
+      "Receipt generation",
+      "Real-time availability tracking",
+      "Customer management",
+      "Revenue analytics and reporting"
+    ]
+  }
+  </script>
+  
+  <!-- Preload critical resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* CSS Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --primary-color: #1a73e8;
+      --secondary-color: #34a853;
+      --accent-color: #ea4335;
+      --text-primary: #202124;
+      --text-secondary: #5f6368;
+      --background-primary: #ffffff;
+      --background-secondary: #f8f9fa;
+      --border-color: #e8eaed;
+      --shadow-light: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      --shadow-medium: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      --shadow-heavy: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      --border-radius: 12px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background-color: var(--background-primary);
+      overflow-x: hidden;
+    }
+    
+    /* Navigation */
+    .nav {
+      background: var(--background-primary);
+      padding: 1rem 0;
+      box-shadow: var(--shadow-light);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+    
+    .nav-logo-icon {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1rem;
+    }
+    
+    .back-btn {
+      background: var(--background-secondary);
+      color: var(--text-primary);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    
+    .back-btn:hover {
+      background: var(--border-color);
+    }
+    
+    /* Header Styles */
+    .header {
+      background: linear-gradient(135deg, #1565C0 0%, #1976D2 100%);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+      opacity: 0.1;
+    }
+    
+    .header-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .app-icon-large {
+      width: 120px;
+      height: 120px;
+      background: white;
+      border-radius: 24px;
+      margin: 0 auto 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      box-shadow: var(--shadow-heavy);
+    }
+    
+    .header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .header p {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+    
+    .download-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: white;
+      color: var(--primary-color);
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: var(--transition);
+      box-shadow: var(--shadow-medium);
+    }
+    
+    .download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-heavy);
+    }
+    
+    .download-btn.secondary {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+    
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    /* Section Styles */
+    .section {
+      padding: 4rem 0;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+    
+    .section-description {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 3rem;
+    }
+    
+    /* Features Section */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .feature-card {
+      background: var(--background-primary);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-light);
+      transition: var(--transition);
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-medium);
+    }
+    
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #1565C0, #2196F3);
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: white;
+    }
+    
+    .feature-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .feature-description {
+      color: var(--text-secondary);
+    }
+    
+    /* Screenshots Section */
+    .screenshots {
+      background: var(--background-secondary);
+    }
+    
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .screenshot {
+      background: var(--background-primary);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      text-align: center;
+      box-shadow: var(--shadow-light);
+    }
+    
+    .screenshot-placeholder {
+      width: 100%;
+      height: 400px;
+      background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      border: 2px solid #2196F3;
+    }
+    
+    .screenshot-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .screenshot-description {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+    
+    /* Stats Section */
+    .stats {
+      text-align: center;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .stat-item {
+      text-align: center;
+    }
+    
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--text-primary);
+      color: white;
+      text-align: center;
+      padding: 3rem 2rem 2rem;
+    }
+    
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .footer p {
+      opacity: 0.8;
+      margin-bottom: 1rem;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header {
+        padding: 3rem 1rem;
+      }
+      
+      .header h1 {
+        font-size: 2.5rem;
+      }
+      
+      .download-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .container {
+        padding: 0 1rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .nav-content {
+        padding: 0 1rem;
+      }
+      
+      .header h1 {
+        font-size: 2rem;
+      }
+      
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-content">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">KS</div>
+        <span>KSK Apps</span>
+      </a>
+      <a href="index.html" class="back-btn">← Back to Apps</a>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="header-content">
+      <div class="app-icon-large">🅿️</div>
+      <h1>Smart Parking Manager</h1>
+      <p>A comprehensive tool for managing parking operations, including billing and receipt generation. Streamline your parking business with powerful automation.</p>
+      <div class="download-buttons">
+        <a href="https://play.google.com/store/apps/details?id=com.ksk.smartparking" class="download-btn" target="_blank">
+          📱 Download from Google Play
+        </a>
+        <a href="#features" class="download-btn secondary">
+          🔍 Learn More
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2 class="section-title">Powerful Features</h2>
+      <p class="section-description">
+        Everything you need to manage your parking operations efficiently and professionally.
+      </p>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🏢</div>
+          <h3 class="feature-title">Space Management</h3>
+          <p class="feature-description">
+            Efficiently manage parking spaces with real-time availability tracking and automated space allocation.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">💳</div>
+          <h3 class="feature-title">Automated Billing</h3>
+          <p class="feature-description">
+            Generate bills automatically based on parking duration, vehicle type, and custom pricing rules.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🧾</div>
+          <h3 class="feature-title">Receipt Generation</h3>
+          <p class="feature-description">
+            Create professional receipts instantly with customizable templates and automatic numbering.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h3 class="feature-title">Customer Management</h3>
+          <p class="feature-description">
+            Maintain customer records, parking history, and preferences for better service delivery.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3 class="feature-title">Revenue Analytics</h3>
+          <p class="feature-description">
+            Track revenue, analyze parking patterns, and generate detailed business reports.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3 class="feature-title">Mobile Optimized</h3>
+          <p class="feature-description">
+            Manage your parking operations on-the-go with our fully mobile-optimized interface.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots Section -->
+  <section class="section screenshots">
+    <div class="container">
+      <h2 class="section-title">App Interface</h2>
+      <p class="section-description">
+        Experience the intuitive design and powerful functionality of Smart Parking Manager.
+      </p>
+      
+      <div class="screenshots-grid">
+        <div class="screenshot">
+          <div class="screenshot-placeholder">🏢</div>
+          <h4 class="screenshot-title">Parking Overview</h4>
+          <p class="screenshot-description">Real-time view of all parking spaces and availability</p>
+        </div>
+        
+        <div class="screenshot">
+          <div class="screenshot-placeholder">💳</div>
+          <h4 class="screenshot-title">Billing System</h4>
+          <p class="screenshot-description">Automated billing and payment processing</p>
+        </div>
+        
+        <div class="screenshot">
+          <div class="screenshot-placeholder">📊</div>
+          <h4 class="screenshot-title">Analytics Dashboard</h4>
+          <p class="screenshot-description">Comprehensive business insights and reports</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="section stats">
+    <div class="container">
+      <h2 class="section-title">Trusted by Parking Professionals</h2>
+      <p class="section-description">
+        Join parking operators worldwide who trust Smart Parking Manager for their business operations.
+      </p>
+      
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">12K+</div>
+          <div class="stat-label">Downloads</div>
+        </div>
+        
+        <div class="stat-item">
+          <div class="stat-number">4.4★</div>
+          <div class="stat-label">Average Rating</div>
+        </div>
+        
+        <div class="stat-item">
+          <div class="stat-number">200+</div>
+          <div class="stat-label">Parking Facilities</div>
+        </div>
+        
+        <div class="stat-item">
+          <div class="stat-number">50K+</div>
+          <div class="stat-label">Vehicles Managed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Kaaviya SivaKumar. All rights reserved.</p>
+      <p>Smart Parking Manager - Revolutionizing parking operations management.</p>
+    </div>
+  </footer>
+</body>
+</html>
