@@ -200,6 +200,16 @@
       color: var(--text-light);
     }
 
+    /* Quick Navigation Links */
+    a[href^="#"]:not(.cta-button) {
+      transition: all 0.2s ease;
+    }
+
+    a[href^="#"]:not(.cta-button):hover {
+      transform: translateX(5px);
+      box-shadow: var(--shadow-sm);
+    }
+
     /* Disclosure Banner */
     .disclosure-banner {
       background-color: var(--warning-bg);
@@ -715,6 +725,19 @@
         padding: 1.5rem 1rem;
       }
 
+      .hero-badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 1rem;
+      }
+
+      .trust-badges {
+        gap: 1rem;
+      }
+
+      .trust-badge {
+        font-size: 0.75rem;
+      }
+
       .specs-table {
         font-size: 0.875rem;
       }
@@ -723,6 +746,14 @@
       .specs-table td {
         padding: 0.75rem;
       }
+
+      .final-cta h2 {
+        font-size: 1.75rem;
+      }
+
+      .final-cta {
+        padding: 3rem 1.5rem;
+      }
     }
 
     @media (max-width: 480px) {
@@ -730,9 +761,78 @@
         font-size: 1.75rem;
       }
 
-      .cta-button {
-        padding: 0.875rem 1.5rem;
+      .subtitle {
         font-size: 1rem;
+      }
+
+      .cta-button {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+      }
+
+      .hero-badge {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+      }
+
+      .trust-badges {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .breadcrumb {
+        font-size: 0.75rem;
+      }
+
+      .sticky-cta {
+        bottom: 10px;
+        right: 10px;
+      }
+
+      .sticky-cta .cta-button {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.875rem;
+      }
+
+      .pros-box, .cons-box {
+        padding: 1.25rem;
+      }
+
+      .specs-table {
+        font-size: 0.75rem;
+      }
+
+      .specs-table th,
+      .specs-table td {
+        padding: 0.5rem;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      .sticky-cta {
+        display: none !important;
+      }
+
+      .disclosure-banner {
+        background: white;
+        border: 1px solid #000;
+      }
+
+      .cta-button {
+        border: 2px solid #000;
+        background: white !important;
+        color: #000 !important;
+      }
+
+      .final-cta {
+        background: white !important;
+        border: 2px solid #000;
+        color: #000 !important;
+      }
+
+      .final-cta * {
+        color: #000 !important;
       }
     }
   </style>
@@ -790,22 +890,35 @@
       </p>
     </section>
 
+    <!-- Quick Navigation -->
+    <section class="content-section" style="background: var(--bg-light); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+      <h2 style="font-size: 1.25rem; margin-bottom: 1rem; border: none; padding: 0;">📋 Quick Navigation</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; font-size: 0.9375rem;">
+        <a href="#overview" style="color: var(--primary-color); text-decoration: none; padding: 0.5rem; background: white; border-radius: 6px; transition: all 0.2s;">📖 Overview</a>
+        <a href="#pros-cons" style="color: var(--primary-color); text-decoration: none; padding: 0.5rem; background: white; border-radius: 6px; transition: all 0.2s;">⚖️ Pros & Cons</a>
+        <a href="#features" style="color: var(--primary-color); text-decoration: none; padding: 0.5rem; background: white; border-radius: 6px; transition: all 0.2s;">✨ Key Features</a>
+        <a href="#specifications" style="color: var(--primary-color); text-decoration: none; padding: 0.5rem; background: white; border-radius: 6px; transition: all 0.2s;">📊 Specifications</a>
+        <a href="#alternatives" style="color: var(--primary-color); text-decoration: none; padding: 0.5rem; background: white; border-radius: 6px; transition: all 0.2s;">🔄 Alternatives</a>
+        <a href="#faq" style="color: var(--primary-color); text-decoration: none; padding: 0.5rem; background: white; border-radius: 6px; transition: all 0.2s;">❓ FAQ</a>
+      </div>
+    </section>
+
     <!-- Overview Section -->
-    <section class="content-section">
+    <section class="content-section" id="overview">
       <h2>Overview</h2>
       <p>
-        The <strong>Green Soul Jupiter Pro (2025 Edition)</strong> stands out as one of India's most popular ergonomic office chairs, and for good reason. With over 16,000 customer reviews and a solid 4.3-star rating, this chair has proven its worth in countless home offices and professional workspaces across the country.
+        The <strong>Green Soul Jupiter Pro (2025 Edition)</strong> stands out as one of India's most popular ergonomic office chairs, and for good reason. With over 16,000 customer reviews and a solid 4.3-star rating on <a href="https://amzn.to/49dPhMA" rel="nofollow sponsored" target="_blank" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Amazon India</a>, this chair has proven its worth in countless home offices and professional workspaces across the country.
       </p>
       <p>
         Designed with long working hours in mind, the Jupiter Pro combines advanced ergonomic features with durability and style. Whether you're working from home, gaming, or spending extended periods at your desk, this chair promises to deliver the comfort and support your body needs.
       </p>
       <p>
-        In this comprehensive review, we'll dive deep into what makes the Green Soul Jupiter Pro special, examine its pros and cons, explore detailed specifications, and help you decide if this is the right chair for your needs.
+        In this comprehensive review, we'll dive deep into what makes the Green Soul Jupiter Pro special, examine its <a href="#pros-cons" style="color: var(--primary-color); text-decoration: none;">pros and cons</a>, explore detailed <a href="#specifications" style="color: var(--primary-color); text-decoration: none;">specifications</a>, and help you decide if this is the right chair for your needs.
       </p>
     </section>
 
     <!-- Pros and Cons Section -->
-    <section class="content-section">
+    <section class="content-section" id="pros-cons">
       <h2>Pros & Cons</h2>
       <div class="pros-cons-grid">
         <div class="pros-box">
@@ -834,7 +947,7 @@
     </section>
 
     <!-- Detailed Features Section -->
-    <section class="content-section">
+    <section class="content-section" id="features">
       <h2>Key Features</h2>
       
       <h3>Ergonomic Design</h3>
@@ -865,7 +978,7 @@
     </section>
 
     <!-- Specifications Section -->
-    <section class="content-section">
+    <section class="content-section" id="specifications">
       <h2>Technical Specifications</h2>
       <table class="specs-table">
         <thead>
@@ -936,7 +1049,7 @@
     </section>
 
     <!-- Alternatives Section -->
-    <section class="content-section">
+    <section class="content-section" id="alternatives">
       <h2>Alternatives to Consider</h2>
       <p>
         While the Green Soul Jupiter Pro is an excellent choice, here are some alternatives you might want to consider:
@@ -969,7 +1082,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="content-section">
+    <section class="content-section" id="faq">
       <h2>Frequently Asked Questions</h2>
 
       <div class="faq-item">
@@ -1099,6 +1212,23 @@
       } else {
         stickyCta.classList.remove('visible');
       }
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && href.length > 1) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
     });
   </script>
 </body>
