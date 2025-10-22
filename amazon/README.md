@@ -16,9 +16,12 @@ This directory contains SEO-optimized Amazon affiliate review pages designed to 
 
 ## 🚀 Quick Start
 
-### Creating a New Review Page
+**New to creating review pages?** Start with our [QUICK_START.md](./QUICK_START.md) guide - create your first review in 30 minutes!
+
+### Creating a New Review Page (Overview)
 
 1. **Prepare Product Information**
+   - Use [PRODUCT_RESEARCH_TEMPLATE.md](./PRODUCT_RESEARCH_TEMPLATE.md) to gather all data
    - Get Amazon affiliate link
    - Collect product specs, ratings, and reviews
    - Download high-quality product images
@@ -51,25 +54,39 @@ This directory contains SEO-optimized Amazon affiliate review pages designed to 
    - Push to repository
    - Submit URL to Google Search Console
 
+**📖 Detailed Instructions**: See [QUICK_START.md](./QUICK_START.md) for step-by-step guide
+
 ## 📚 Documentation
 
 ### Main Documents
 
-1. **[AMAZON_REVIEW_GUIDE.md](./AMAZON_REVIEW_GUIDE.md)**
+1. **[QUICK_START.md](./QUICK_START.md)** ⭐ START HERE
+   - Step-by-step guide for beginners
+   - Create your first review in 30 minutes
+   - Common mistakes to avoid
+   - Time-saving tips
+
+2. **[PRODUCT_RESEARCH_TEMPLATE.md](./PRODUCT_RESEARCH_TEMPLATE.md)**
+   - Structured template for gathering product data
+   - All fields needed for a complete review
+   - Category-specific specifications
+   - SEO keyword planning
+
+3. **[AMAZON_REVIEW_GUIDE.md](./AMAZON_REVIEW_GUIDE.md)**
    - Complete SEO strategy guide
    - Keyword research tips
    - Content structure best practices
    - Performance optimization
    - Conversion optimization techniques
 
-2. **[CHECKLIST.md](./CHECKLIST.md)**
+4. **[CHECKLIST.md](./CHECKLIST.md)**
    - Pre-writing checklist
    - Content checklist
    - Technical checklist
    - Testing checklist
    - Deployment checklist
 
-3. **[TEMPLATE.html](./TEMPLATE.html)**
+5. **[TEMPLATE.html](./TEMPLATE.html)**
    - Ready-to-use HTML template
    - Embedded CSS (optimized for performance)
    - Structured data schemas
