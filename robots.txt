@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://emobileappz.github.io/sid.github.io/sitemap.xml
+Sitemap: https://ksk-apps.xyz/sitemap.xml
 
 # Optimize crawling
 Crawl-delay: 1
