@@ -73,41 +73,20 @@
   </script>
   
   <!-- Preload critical resources -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
+  <!-- Common Styles -->
+  <link rel="stylesheet" href="/assets/css/common.css">
+  
   <style>
-    /* CSS Reset and Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    /* Page-specific styles */
     
-    :root {
-      --primary-color: #1a73e8;
-      --secondary-color: #34a853;
-      --accent-color: #ea4335;
-      --text-primary: #202124;
-      --text-secondary: #5f6368;
-      --background-primary: #ffffff;
-      --background-secondary: #f8f9fa;
-      --border-color: #e8eaed;
-      --shadow-light: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-      --shadow-medium: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-      --shadow-heavy: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-      --border-radius: 12px;
-      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+
     
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6;
-      color: var(--text-primary);
-      background-color: var(--background-primary);
-      overflow-x: hidden;
-    }
+
     
     /* Navigation */
     .nav {
@@ -609,5 +588,7 @@
       <p>Habit Loop - Building better lives through the power of habits.</p>
     </div>
   </footer>
+  <!-- Common JavaScript -->
+  <script src="/assets/js/common.js"></script>
 </body>
 </html>
