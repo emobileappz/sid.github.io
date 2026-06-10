@@ -1,6 +1,6 @@
-# KSK Apps - Kaaviya SivaKumar Mobile Apps Showcase
+# KSK Apps - KUMAR A Mobile Apps Showcase
 
-A premium, SEO-optimized website showcasing mobile applications developed by Kaaviya SivaKumar. Built with modern web technologies and optimized for Google search rankings.
+A premium, SEO-optimized website showcasing mobile applications developed by KUMAR A. Built with modern web technologies and optimized for Google search rankings.
 
 ## 🌟 Features
 
@@ -28,11 +28,11 @@ A premium, SEO-optimized website showcasing mobile applications developed by Kaa
 
 ## 🚀 Live Website
 
-Visit the live website: [https://emobileappz.github.io/sid.github.io/](https://emobileappz.github.io/sid.github.io/)
+Visit the live website: [https://ksk-apps.xyz/](https://ksk-apps.xyz/)
 
 ## 📱 Google Play Store
 
-View all apps by Kaaviya SivaKumar: [Google Play Store Developer Profile](https://play.google.com/store/apps/developer?id=Kaaviya+SivaKumar)
+View all apps by KUMAR A: [Google Play Store Developer Profile](https://play.google.com/store/apps/developer?id=KUMAR+A)
 
 ## 🛠️ Technical Stack
 
@@ -79,4 +79,4 @@ The website is built with maintainable code that allows for easy:
 
 ---
 
-**Created by Kaaviya SivaKumar** | **© 2024 All Rights Reserved**
+**Created by KUMAR A** | **© 2024 All Rights Reserved**
