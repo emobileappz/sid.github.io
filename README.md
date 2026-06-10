@@ -1,4 +1,4 @@
-# KSK Apps - KUMAR A Mobile Apps Showcase
+# KUMAR A - Mobile Apps Showcase
 
 A premium, SEO-optimized website showcasing mobile applications developed by KUMAR A. Built with modern web technologies and optimized for Google search rankings.
 
